@@ -143,7 +143,13 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 // const t = dom.find('#travel')[0]
 // dom.each(dom.children(t),(n)=>dom.style(n,'color','red'))
 
-console.log(dom.index(t2));
+// console.log(dom.index(t2));
+var div = dom.find('#test>.red')[0]; // 获取对应的元素
+dom.style(div, 'color', 'red'); // 设置 div.style.color
+var divList = dom.find('.red'); // 获取多个 div.red 元素
+dom.each(divList, function (n) {
+  return console.log(n);
+}); // 遍历 divList 里的所有元素
 },{}],"C:\\Users\\11488\\AppData\\Local\\Yarn\\Data\\global\\node_modules\\parcel\\src\\builtins\\hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -173,7 +179,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = '' || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + '50808' + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + '53060' + '/');
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
 
